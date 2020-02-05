@@ -1,4 +1,4 @@
-import logo from '../images/logo_example.png'; // add school logo to images folder and import here
+import logo from '../images/logo_wharton.png'; // add school logo to images folder and import here
 
 export const applicationsLive = true; // set to false if not currently accepting applications
 export const disabledLoanAppFormID = '69140c47-bb03-4a1b-b674-cc136fdea23d'; // Hubspot ID for all disabled apply now lead captures
@@ -11,24 +11,24 @@ export const schoolInfo = {
 	// term details section
 	interestRate36: '8.99%',
 	interestRate60: '10.99%',
-	APRRange36: 'XX.XX - XX.XX%',
-	APRRange60: 'XX.XX - XX.XX%',
+	APRRange36: '10.94%',
+	APRRange60: '12.41%',
 	interestOnly: [
 		{
 			// for multiple examples of interest only, add items to interestOnly array
 			programName: '',
-			APR36: 'XX.XX%',
-			financeCharge36: '$X,XXX.XX',
-			IOPayment36: '$XX.XX',
-			FullMonthlyPayment36: '$XXX.XX',
-			APR60: 'XX.XX%',
-			financeCharge60: '$X,XXX.XX',
-			IOPayment60: '$XX.XX',
-			FullMonthlyPayment60: '$XXX.XX',
+			APR36: '10.94%',
+			financeCharge36: '$2,527.38',
+			IOPayment36: '$77.91',
+			FullMonthlyPayment36: '$330.67',
+			APR60: '12.41%',
+			financeCharge60: '$4,326.13',
+			IOPayment60: '$95.25',
+			FullMonthlyPayment60: '$226.07',
 			LoanExampleAmt: '$10,000',
 			LoanExampleOFeeAmt: '$400',
 			LoanExampleAmtPlusOFee: '$10,400',
-			programLength: 'X' // program length in months
+			programLength: '6' // program length in months
 		}
 	],
 	immediateRepayment: [
@@ -52,13 +52,13 @@ export const faq = {
 	// faq section
 	costOfLiving: false, // true if at least one program has cost of living included
 	costOfLivingPrograms: '', // leave as empty string is cost of living availability is the same across all programs
-	multCostOfLivingPrograms: true, // true if costOfLivingPrograms string has more than one program
+	multCostOfLivingPrograms: false, // true if costOfLivingPrograms string has more than one program
 	interestOnly: true, // true if interest-only payments are an option
-	immediateRepayment: true, // true if immediate repayment is an option
+	immediateRepayment: false, // true if immediate repayment is an option
 	multipleLoanLengths: true, // true if 36 and 60 month options are both available
-	multipleLoanTypes: true, // true if both IR and IO are available
-	multiPrograms: true, // only true if there are multiple programs
-	onlinePrograms: false, // true if at least one program is remote/online
+	multipleLoanTypes: false, // true if both IR and IO are available
+	multiPrograms: false, // only true if there are multiple programs
+	onlinePrograms: true, // true if at least one program is remote/online
 	schoolHQState: 'WA',
 	origFee: 0.04,
 
@@ -66,22 +66,16 @@ export const faq = {
 	exampleLoanAmount: '$10,000',
 	interestRate36: '8.99%',
 	interestRate60: '10.99%',
-	APR36: 'XX.XX - XX.XX%',
-	APR60: 'XX.XX - XX.XX%',
+	APR36: '10.94%',
+	APR60: '12.41%',
 	IOPayment36: '$77.91',
 	IOPayment60: '$95.25',
 
 	// max loan amounts by program for faq1
 	loanRange: [
 		{
-			programName: 'PROGRAM 1',
-			maxAmount: 'the max loan amount',
-			col: true,
-			colAmount: '$6,000'
-		},
-		{
-			programName: 'PROGRAM 2',
-			maxAmount: '$10,750',
+			programName: 'Applied Data Science',
+			maxAmount: '$12,500',
 			col: false,
 			colAmount: '$6,000'
 		}
@@ -94,17 +88,17 @@ export const faq = {
 
 export const schoolLogo = logo; // go to header.js if height needs adjustment
 
-export const schoolName = 'Your School';
+export const schoolName = 'Wharton';
 
-export const schoolURL = 'https://www.SCHOOLWEBSITE.com/'; // update with url of school's website
+export const schoolURL = 'https://www.wharton.upenn.edu/'; // update with url of school's website
 
-export const skfURL = 'https://SCHOOLNAME.skills.fund'; // update with Skills Fund url
+export const skfURL = 'https://wharton.skills.fund'; // update with Skills Fund url
 
-export const headline = 'Learn to Code at Your School'; // update headline as appropriate
+export const headline = 'Learn Data Science at Wharton'; // update headline as appropriate
 
 export const leadContent = {
 	header: 'Your last step on the path toward changing your career',
-	paragraph: `${schoolName} designs its programs to cover multiple stacks of programming languages to help graduates develop a diverse skill-set. ${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
+	paragraph: `${schoolName} designs its programs to provide students with a foundation for a career in data science. ${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
 		? ' and cost of living'
 		: ''} financing so more students like you can access their program.`
 };
@@ -113,18 +107,19 @@ export const threeStepCardText = {
 	step1: '',
 	step2: {
 		header: 'select your program',
-		text: 'Choose between the Program 1, Program 2, and Program 3 programs.'
+		text:
+			'The Wharton School of the University of Pennsylvania focuses exclusively on its Applied Data Science program.'
 	},
 	step3: `You'll be on your way to an exciting career in tech as part of ${schoolName}'s powerful network.`
 };
 
-export const netlifyFormName = 'SCHOOLNAME_contact';
+export const netlifyFormName = 'wharton_contact';
 
 export const GATracking = 'UA-68312423-1';
 
-export const hubspotFormId = 'HUBSPOT_FORM_ID'; // create Hubspot form, get form id after publishing
+export const hubspotFormId = 'a40d3344-0fe7-4343-b887-16f10e331353'; // create Hubspot form, get form id after publishing
 
-export const selectAProgram = 'select_a_SCHOOLNAME_program'; // update school name to match form field on Hubspot, *** change to "program_name" if only one program ***"
+export const selectAProgram = 'program_name'; // update school name to match form field on Hubspot, *** change to "program_name" if only one program ***"
 
 // ***** END GENERAL SCHOOL INFO *****
 
@@ -141,23 +136,23 @@ export const moreThanSixPrograms = false; // set to true if there are 7 or more 
 export const programLoanInfo = [
 	// update with program names and corresponding loan URLs with market segment code from Master Loan Parameters
 	{
-		name: 'Program 1',
+		name: 'Applied Data Science',
 		url: 'https://my.skills.fund/application?lenderCode=LENDERCODE1',
 		loanInfo: {
 			// match loanInfo in first metro below
-			maxLoanAmt: 19495,
+			maxLoanAmt: 12500,
 			loanTerm36: true,
 			loanTerm60: true,
 			'0': {
 				// interest-only
-				k: 5,
-				apr36: 11.16,
-				apr60: 12.51
+				k: 8,
+				apr36: 10.94,
+				apr60: 12.41
 			},
 			'1': null // immediate repayment
 		},
 		defaultLoanType: '0', // leave at 0 for interest-only, set to 1 for immediate repayment
-		showMetros: true, // true if there are multiple metros with different tuition amounts for the same program
+		showMetros: false, // true if there are multiple metros with different tuition amounts for the same program
 		showLoanTypes: false, // true if both IR and IO are available
 		locations: [ 'Metro 1', 'Metro 2', 'Metro 3' ],
 		metros: [
@@ -166,13 +161,13 @@ export const programLoanInfo = [
 				location: 'Metro 1',
 				loanInfo: {
 					// // match loanInfo to Program 1 above
-					maxLoanAmt: 19495,
+					maxLoanAmt: 12500,
 					loanTerm36: true,
 					loanTerm60: true,
 					'0': {
-						k: 5,
-						apr36: 11.16,
-						apr60: 12.51
+						k: 8,
+						apr36: 10.94,
+						apr60: 12.41
 					},
 					'1': null
 				}
