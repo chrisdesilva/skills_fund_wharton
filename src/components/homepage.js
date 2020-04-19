@@ -119,15 +119,16 @@ class Homepage extends React.Component {
 				<SEO title={this.props.schoolName} />
 				<Banner howItWorksOnClick={this.scrollToContent} applyNowOnClick={this.scrollToApply} />
 				{/* <LeadContent schoolName={this.props.schoolName} />
-				<ThreeSteps onClick={this.scrollToApply2} ref={this.threesteps} schoolName={this.props.schoolName} /> */}
-				{/* <LoanCalculator /> */}
-				<SlidingLoanCalculator />
+				<ThreeSteps onClick={this.scrollToApply2} ref={this.threesteps} schoolName={this.props.schoolName} />
+				<LoanCalculator /> */}
+				<SlidingLoanCalculator location={this.props.location} />
 				{applicationsLive ? (
 					<LoanApp
 						ref={this.apply}
 						IP={this.props.IP}
 						pageUri={this.props.pageUri}
 						schoolName={this.props.schoolName}
+						location={this.props.location}
 					/>
 				) : (
 					<DisabledApplication
