@@ -11,8 +11,8 @@ export const schoolInfo = {
   // term details section
   interestRate36: "8.99%",
   interestRate60: "10.99%",
-  APRRange36: "11.34",
-  APRRange60: "12.73%",
+  APRRange36: "11.26",
+  APRRange60: "12.69%",
   interestOnly: [
     {
       // for multiple examples of interest only, add items to interestOnly array
@@ -66,19 +66,25 @@ export const faq = {
   exampleLoanAmount: "$10,000",
   interestRate36: "8.99%",
   interestRate60: "10.99%",
-  APR36: "11.34",
-  APR60: "12.73%",
+  APR36: "11.26",
+  APR60: "12.69%",
   IOPayment36: "$78.66",
   IOPayment60: "$96.16",
 
   // max loan amounts by program for faq1
   loanRange: [
     {
-      programName: "Applied Data Science",
-      maxAmount: "$12,500",
+      programName: "The Wharton School Management Development Program",
+      maxAmount: "$9,500",
       col: false,
       colAmount: "$6,000",
     },
+    // {
+    //   programName: "Applied Data Science",
+    //   maxAmount: "$12,500",
+    //   col: false,
+    //   colAmount: "$6,000",
+    // },
   ],
 }
 
@@ -94,23 +100,13 @@ export const schoolURL = "https://www.wharton.upenn.edu/" // update with url of 
 
 export const skfURL = "https://wharton.skills.fund" // update with Skills Fund url
 
-export const headline = "Learn Data Science at Wharton" // update headline as appropriate
+export const headline = "Fund Your Future at Wharton" // update headline as appropriate
 
 export const leadContent = {
   header: "Your last step on the path toward changing your career",
   paragraph: `${schoolName} designs its programs to provide students with a foundation for a career in data science. ${schoolName} partners with Skills Fund to offer tuition${
     faq.costOfLiving ? " and cost of living" : ""
   } financing so more students like you can access their program.`,
-}
-
-export const threeStepCardText = {
-  step1: "",
-  step2: {
-    header: "select your program",
-    text:
-      "The Wharton School of the University of Pennsylvania focuses exclusively on its Applied Data Science program.",
-  },
-  step3: `You'll be on your way to an exciting career in tech as part of ${schoolName}'s powerful network.`,
 }
 
 export const netlifyFormName = "wharton_contact"
@@ -136,18 +132,18 @@ export const moreThanSixPrograms = false // set to true if there are 7 or more p
 export const programLoanInfo = [
   // update with program names and corresponding loan URLs with market segment code from Master Loan Parameters
   {
-    name: "Applied Data Science",
-    url: "https://my.skills.fund/application?lenderCode=SFEWADSPT19",
+    name: "The Wharton School Management Development Program",
+    url: "https://my.skills.fund/application?lenderCode=SFEWSMDP20",
     loanInfo: {
       // match loanInfo in first metro below
-      maxLoanAmt: 12500,
+      maxLoanAmt: 9500,
       loanTerm36: true,
       loanTerm60: true,
       "Interest Only": {
         // interest-only
-        k: 9,
-        apr36: 10.94,
-        apr60: 12.73,
+        k: 10,
+        apr36: 11.26,
+        apr60: 12.69,
       },
       "Immediate Repayment": null, // immediate repayment
     },
@@ -162,13 +158,13 @@ export const programLoanInfo = [
         location: "Metro 1",
         loanInfo: {
           // // match loanInfo to Program 1 above
-          maxLoanAmt: 12500,
+          maxLoanAmt: 9500,
           loanTerm36: true,
           loanTerm60: true,
           "Interest Only": {
-            k: 9,
-            apr36: 10.94,
-            apr60: 12.73,
+            k: 10,
+            apr36: 11.26,
+            apr60: 12.69,
           },
           "Immediate Repayment": null,
         },
@@ -203,6 +199,74 @@ export const programLoanInfo = [
       },
     ],
   },
+  // {
+  //   name: "Applied Data Science",
+  //   url: "https://my.skills.fund/application?lenderCode=SFEWADSPT19",
+  //   loanInfo: {
+  //     // match loanInfo in first metro below
+  //     maxLoanAmt: 12500,
+  //     loanTerm36: true,
+  //     loanTerm60: true,
+  //     "Interest Only": {
+  //       // interest-only
+  //       k: 9,
+  //       apr36: 10.94,
+  //       apr60: 12.73,
+  //     },
+  //     "Immediate Repayment": null, // immediate repayment
+  //   },
+  //   defaultLoanType: "Interest Only", // leave at 0 for interest-only, set to 1 for immediate repayment
+  //   showMetros: false, // true if there are multiple metros with different tuition amounts for the same program
+  //   showLoanTypes: false, // true if both IR and IO are available
+  //   loanTypes: ["Interest Only"],
+  //   locations: ["Metro 1", "Metro 2", "Metro 3"],
+  //   metros: [
+  //     // list in same order as locations array above
+  //     {
+  //       location: "Metro 1",
+  //       loanInfo: {
+  //         // // match loanInfo to Program 1 above
+  //         maxLoanAmt: 12500,
+  //         loanTerm36: true,
+  //         loanTerm60: true,
+  //         "Interest Only": {
+  //           k: 9,
+  //           apr36: 10.94,
+  //           apr60: 12.73,
+  //         },
+  //         "Immediate Repayment": null,
+  //       },
+  //     },
+  //     {
+  //       location: "Metro 2",
+  //       loanInfo: {
+  //         maxLoanAmt: 15545,
+  //         loanTerm36: true,
+  //         loanTerm60: true,
+  //         "Interest Only": {
+  //           k: 5,
+  //           apr36: 11.16,
+  //           apr60: 12.51,
+  //         },
+  //         "Immediate Repayment": null,
+  //       },
+  //     },
+  //     {
+  //       location: "Metro 3",
+  //       loanInfo: {
+  //         maxLoanAmt: 20545,
+  //         loanTerm36: true,
+  //         loanTerm60: true,
+  //         "Interest Only": {
+  //           k: 5,
+  //           apr36: 11.16,
+  //           apr60: 12.51,
+  //         },
+  //         "Immediate Repayment": null,
+  //       },
+  //     },
+  //   ],
+  // },
   // {
   // 	name: 'Program 2',
   // 	url: 'https://my.skills.fund/application?lenderCode=LENDERCODE2',
